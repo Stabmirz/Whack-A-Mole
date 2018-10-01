@@ -27,14 +27,13 @@ function randomHole(holes) {
 }
 
 function peep() {
-    const time = randomTime(500, 1000);
+    const time = randomTime(300, 1000);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
         hole.classList.remove('up');
         if (!timeUp) peep();
     }, time);
-
 }
 
 
@@ -74,15 +73,16 @@ function countdownTimer() {
 }
 
 
-
 function bonk(e) {
     if (!e.isTrusted) return;
     score += 10;
     count++;
     this.parentNode.classList.remove('up');
+    this.parentNode.classList.add('bonked');
     scoreBoard.textContent = score;
     moleCount.textContent = count;
-
+    setTimeout(() => {
+        this.parentNode.classList.remove('bonked');
+    }, 200);
 }
-
 moles.forEach(mole => mole.addEventListener('click', bonk));
