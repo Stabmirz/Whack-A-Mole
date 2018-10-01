@@ -7,58 +7,58 @@
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
 </head>
-
-<div class="header">
-    <div>
-        <div class="timer" ; style="border: 2px solid white; font-size: 20px; font-weight: bold; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">Time :
-            <div class="countdownwidth">
-                <div id="countdown">15</div>s
+<body>
+    <div class="header">
+        <div>
+            <div class="timer" ; style="border: 2px solid white; font-size: 20px; font-weight: bold; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">Time :
+                <div class="countdownwidth">
+                    <div id="countdown">15</div>s
+                </div>
+            </div>
+        </div>
+        <div class="game-name" style="margin-left: 100px;">
+            <h1 style="font-size: 40px; display: flex; justify-content: center;">Whack-A-Mole
+                <img src="./images/mole1.png" alt="Logo" style="height: 60px; width: 50px; margin-left: 10px;">
+            </h1>
+        </div>
+        <div>
+            <div class="score-board">
+                <div class="game-score" style="border: 2px solid white; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">
+                    Score :
+                    <div class="score" style="width: 30px;">0</div>
+                </div>
+                <div class="total-mole" style="border: 2px solid white; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">Mole :
+                    <span class="mole-count" style="text-align: right; width: 30px;">0</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="game-name" style="margin-left: 100px;">
-        <h1 style="font-size: 40px; display: flex; justify-content: center;">Whack-A-Mole
-            <img src="./images/mole1.png" alt="Logo" style="height: 60px; width: 50px; margin-left: 10px;">
-        </h1>
+    <div id="start-game" onClick="startGame()" style="display: flex; justify-content: center; align-items: center;">
+        <img id="play" src="./images/start.png" alt="play" style="margin-right:70px; height: 60px; width: 150px;">
     </div>
-    <div>
-        <div class="score-board">
-            <div class="game-score" style="border: 2px solid white; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">
-                Score :
-                <div class="score" style="width: 30px;">0</div>
-            </div>
-            <div class="total-mole" style="border: 2px solid white; background-color: #5b3718e3; color: white; border-radius: 50%; padding: 20px;">Mole :
-                <span class="mole-count" style="text-align: right; width: 30px;">0</span>
-            </div>
+    <div class="game">
+        <div class="hole hole1">
+            <div class="mole" ></div>
         </div>
-    </div>
-</div>
-<div id="start-game" onClick="startGame()" style="display: flex; justify-content: center; align-items: center;">
-    <img id="play" src="./images/start.png" alt="play" style="margin-right:70px; height: 60px; width: 150px;">
-</div>
-<div class="game">
-    <div class="hole hole1">
-        <div class="mole"></div>
-    </div>
-    <div class="hole hole2">
-        <div class="mole"></div>
-    </div>
-    <div class="hole hole3">
-        <div class="mole"></div>
-    </div>
-    <div class="hole hole4">
-        <div class="mole"></div>
-    </div>
-    <div class="hole hole5">
-        <div class="mole"></div>
-    </div>
-    <div class="hole hole6">
-        <div class="mole"></div>
-    </div>
-</div>
+        <div class="hole hole2">
+            <div class="mole" ></div>
+        </div>
+        <div class="hole hole3">
+            <div class="mole" ></div>
+        </div>
+        <div class="hole hole4">
+            <div class="mole" ></div>
+        </div>
+        <div class="hole hole5">
+            <div class="mole" ></div>
+        </div>
+        <div class="hole hole6">
+            <div class="mole" ></div>
+        </div>
 
-<script src="js/main.js"></script>
-
+    </div>
+    <div class="show-score hide"></div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
