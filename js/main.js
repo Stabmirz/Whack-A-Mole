@@ -27,7 +27,7 @@ function randomHole(holes) {
 }
 
 function peep() {
-    const time = randomTime(300, 1000);
+    const time = randomTime(800, 1600);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
@@ -50,7 +50,6 @@ function startGame() {
 
     setTimeout(() => {
         timeUp = true;
-
         button.innerHTML = '<img src="./images/play-again.png" alt="play-again" style="margin-right:70px; height: 60px; width: 100px;">'
         button.style.visibility = 'visible';
         if (score > 0) {
