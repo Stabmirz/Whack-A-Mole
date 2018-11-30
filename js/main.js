@@ -5,6 +5,7 @@ const moleCount = document.querySelector('.mole-count');
 const moles = document.querySelectorAll('.mole');
 const button = document.querySelector('#start-game');
 const showScore = document.querySelector('.show-score');
+var mySound=document.getElementById("mySound");
 let lastHole;
 let timeUp = false;
 let score = 0;
@@ -76,8 +77,9 @@ function bonk(e) {
     if (!e.isTrusted) return;
     score += 10;
     count++;
-    this.parentNode.classList.remove('up');
     this.parentNode.classList.add('bonked');
+    this.parentNode.classList.remove('up');
+    mySound.play();
     scoreBoard.textContent = score;
     moleCount.textContent = count;
     setTimeout(() => {
